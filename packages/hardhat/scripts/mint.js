@@ -6,14 +6,14 @@ const { utils } = require("ethers");
 const R = require("ramda");
 const ipfsAPI = require('ipfs-http-client');
 const ipfs = ipfsAPI({host: 'ipfs.infura.io', port: '5001', protocol: 'https' })
-const assets = require('../assets.json');
+const assets = require('../assets/catalina-whale.json');
 
 const delayMS = 1000 //sometimes xDAI needs a 6000ms break lol 😅
 
 const main = async () => {
 
   // ADDRESS TO MINT TO:
-  const toAddress = "0x7A63FD46d5eDB9bA7b09CAb488Eb7950e1D8cE78"
+  const toAddress = "0x6A414D70311963A9884e7D9297A9BA921BB16C42"
   const gasLimit = 8000000;
   console.log("\n\n 🎫 Minting to " + toAddress + "...\n");
 
