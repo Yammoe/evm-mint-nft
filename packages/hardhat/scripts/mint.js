@@ -6,14 +6,14 @@ const { utils } = require("ethers");
 const R = require("ramda");
 const ipfsAPI = require('ipfs-http-client');
 const ipfs = ipfsAPI({host: 'ipfs.infura.io', port: '5001', protocol: 'https' })
-const assets = require('../assets/mongomons.json');
+const assets = require('../assets/grim-syndicate.json');
 
 const delayMS = 1000 //sometimes xDAI needs a 6000ms break lol 😅
 
 const main = async () => {
 
   // ADDRESS TO MINT TO:
-  const toAddress = "0xB530D1AfF6F5BeF95d1E3C9672E8f4cBD6952328";
+  const toAddress = config.mintToAddress;
   const gasLimit = 8000000;
   console.log("\n\n 🎫 Minting to " + toAddress + "...\n");
 

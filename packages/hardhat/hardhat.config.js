@@ -24,7 +24,8 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "mumbai";
+const defaultNetwork = "rinkebyBoba";
+const mintToAddress = "0x7A63FD46d5eDB9bA7b09CAb488Eb7950e1D8cE78";
 
 function mnemonic() {
   try {
@@ -41,6 +42,7 @@ function mnemonic() {
 
 module.exports = {
   defaultNetwork,
+  mintToAddress,
 
   // don't forget to set your provider like:
   // REACT_APP_PROVIDER=https://dai.poa.network in packages/react-app/.env
@@ -112,6 +114,34 @@ module.exports = {
         mnemonic: mnemonic(),
       },
       chainId: 137,
+    },
+    rinkebyBoba: {
+      url: "https://rinkeby.boba.network/",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+      chainId: 28,
+    },
+    boba: {
+      url: "https://mainnet.boba.network",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+      chainId: 288,
+    },
+    bscTestnet: {
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+      chainId: 97,
+    },
+    bsc: {
+      url: "https://rpc.ankr.com/bsc",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+      chainId: 56,
     },
     rinkebyArbitrum: {
       url: "https://rinkeby.arbitrum.io/rpc",
