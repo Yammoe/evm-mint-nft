@@ -6,7 +6,7 @@ const { utils } = require("ethers");
 const R = require("ramda");
 const ipfsAPI = require('ipfs-http-client');
 const ipfs = ipfsAPI({host: 'ipfs.infura.io', port: '5001', protocol: 'https' })
-const assets = require('../assets/grim-syndicate.json');
+const assets = require('../assets/degods.json');
 
 const delayMS = 1000 //sometimes xDAI needs a 6000ms break lol 😅
 
@@ -25,7 +25,7 @@ const main = async () => {
     const uploaded = await ipfs.add(JSON.stringify(asset))
 
     console.log(`Minting ${asset.name} with IPFS hash (${uploaded.path})`)
-    await yourCollectible.mintItem(toAddress,uploaded.path,{ gasLimit })
+    await yourCollectible.mintItem(toAddress,uploaded.path)
 
 
     await sleep(delayMS)

@@ -24,7 +24,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "rinkebyBoba";
+const defaultNetwork = "bscTestnet";
 const mintToAddress = "0x7A63FD46d5eDB9bA7b09CAb488Eb7950e1D8cE78";
 
 function mnemonic() {
