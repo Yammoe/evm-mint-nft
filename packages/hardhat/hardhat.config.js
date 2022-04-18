@@ -24,7 +24,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "bscTestnet";
+const defaultNetwork = "mumbai";
 const mintToAddress = "0x7A63FD46d5eDB9bA7b09CAb488Eb7950e1D8cE78";
 
 function mnemonic() {
@@ -101,7 +101,7 @@ module.exports = {
       },
     },
     mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com/",
+      url: "https://speedy-nodes-nyc.moralis.io/45b180f98bb202076a838947/polygon/mumbai",
       gasPrice: 1100000000,
       accounts: {
         mnemonic: mnemonic(),

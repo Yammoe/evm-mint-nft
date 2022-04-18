@@ -14,7 +14,7 @@ contract YourCollectible is ERC721, Ownable {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-  constructor() public ERC721("DeGods", "DGS") {
+  constructor() public ERC721("CreamyFriends", "CMF") {
     _setBaseURI("https://ipfs.io/ipfs/");
   }
 
