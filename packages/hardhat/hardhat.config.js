@@ -24,7 +24,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "mumbai";
+const defaultNetwork = "harmonyTestnet";
 const mintToAddress = "0x7A63FD46d5eDB9bA7b09CAb488Eb7950e1D8cE78";
 
 function mnemonic() {
@@ -142,6 +142,20 @@ module.exports = {
         mnemonic: mnemonic(),
       },
       chainId: 56,
+    },
+    harmonyTestnet: {
+      url: "https://api.s0.b.hmny.io",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+      chainId: 1666700000,
+    },
+    harmony: {
+      url: "https://api.harmony.one",
+      accounts: {
+        mnemonic: mnemonic(),
+      },
+      chainId: 1666600000,
     },
     rinkebyArbitrum: {
       url: "https://rinkeby.arbitrum.io/rpc",
